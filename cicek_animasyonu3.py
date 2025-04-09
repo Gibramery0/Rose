@@ -57,7 +57,7 @@ def update(frame):
     if frame % 5 == 0:
         star_x = np.random.uniform(-2.5, 2.5)
         star_y = np.random.uniform(-2.5, 2.5)
-        star = patches.RegularPolygon((star_x, star_y), 5, 0.1, 
+        star = patches.RegularPolygon((star_x, star_y), 5, radius=0.1, 
                                     color='white', alpha=0.7)
         ax.add_patch(star)
     
@@ -77,7 +77,7 @@ for _ in range(50):
     x = np.random.uniform(-3, 3)
     y = np.random.uniform(-3, 3)
     size = np.random.uniform(0.05, 0.2)
-    star = patches.RegularPolygon((x, y), 5, size, 
+    star = patches.RegularPolygon((x, y), 5, radius=size, 
                                 color='white', alpha=0.5)
     ax.add_patch(star)
 
